@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './Form.css'
-import {useTelegram} from '../../hooks/useTelegram'
+import {useTelegram} from "../../hooks/useTelegram";
 
 const Form = () => {
     const [country, setCountry] = useState('')
@@ -9,7 +9,6 @@ const Form = () => {
     const { tg } = useTelegram()
 
     useEffect(() => {
-        console.log(tg)
         tg.MainButton.setParams({
             text: 'Отправить данные'
         })

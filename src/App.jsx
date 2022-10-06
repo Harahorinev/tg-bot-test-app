@@ -7,10 +7,10 @@ import ProductList from "./components/productList/ProductList";
 import Form from "./components/form/Form";
 
 function App() {
-    const {TG} = useTelegram()
+    const {tg} = useTelegram()
 
     useEffect(() => {
-        TG.ready()
+        tg.ready()
     },[])
 
 
