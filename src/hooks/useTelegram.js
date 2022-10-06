@@ -1,5 +1,3 @@
-import React from 'react';
-
 const tg = window.Telegram.WebApp
 
 export function useTelegram () {
@@ -9,7 +7,7 @@ export function useTelegram () {
     }
 
     const onToggleButton = () => {
-        if (tg.MainButton.visible) {
+        if (tg.MainButton.isVisible) {
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()
@@ -17,9 +15,9 @@ export function useTelegram () {
     }
 
     return {
-        tg,
-        user: tg.initDataUnsafe?.user,
         onClose,
-        onToggleButton
+        onToggleButton,
+        tg,
+        user: tg.initDataUnsafe?.user
     }
 }
