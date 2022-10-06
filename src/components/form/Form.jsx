@@ -6,9 +6,10 @@ const Form = () => {
     const [country, setCountry] = useState('')
     const [street, setStreet] = useState('')
     const [subject, setSubject] = useState('physical')
-    const {tg} = useTelegram()
+    const { tg } = useTelegram()
 
     useEffect(() => {
+        console.dir(tg)
         tg.MainButton.setParams({
             text: 'Отправить данные'
         })
