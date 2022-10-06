@@ -52,8 +52,8 @@ const Form = () => {
                 onChange={onChangeStreet}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
-                <option value={'physical'}>Юр. Лицо</option>
-                <option value={'legal'}>Физ. Лицо</option>
+                <option className={'select'} value={'physical'}>Юр. Лицо</option>
+                <option className={'select'} value={'legal'}>Физ. Лицо</option>
             </select>
         </div>
     )
